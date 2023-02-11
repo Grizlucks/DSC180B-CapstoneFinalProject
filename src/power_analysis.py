@@ -49,7 +49,7 @@ def analysis(bls):
 
     return potential
 
-def power_analysis(inpath, outpath):
+def power_analysis(inpath, outpath, occupations, num_occupations):
     bls = pd.read_csv(inpath+'blsdata.csv')
     jobs_of_interest = analysis(bls)
 

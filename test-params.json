@@ -1,4 +1,6 @@
 {
     "inpath": "test/raw/",
-    "outpath": "test/out/"
+    "outpath": "test/out/",
+    "occupations": ["Tester"],
+    "num_occupations": 10
 }
