@@ -26,14 +26,11 @@ def one_prop_sample_size(p0, p1, alpha, power):
 
 def analysis(bls):
     bls = bls[~(bls["Occupations"].str.contains("occupation",case=False).fillna(False))]
-    full_bls = bls.dropna(how='all').iloc[:-1]
-    # return bls
+    full_bls = bls.dropna(how='all')
     full_bls['Count'] = full_bls['Count'].str.replace(',','').astype(int)
     # Looking at occupations that are in the upper half in count in our dataset
     clean_bls = full_bls[full_bls['Count'] > 85]
-    # return clean_bls
     clean_bls['Women'] = clean_bls['Women'].replace('–',np.nan).astype(float)
-    # return clean_bls
     clean_bls['Black or African American'] = clean_bls['Black or African American'].replace('–',np.nan).astype(float)
     clean_bls['Asian'] = clean_bls['Asian'].replace('–',np.nan).astype(float)
     clean_bls['Hispanic or Latino'] = clean_bls['Hispanic or Latino'].replace('–',np.nan).astype(float)
@@ -48,9 +45,9 @@ def analysis(bls):
 
     w_samples["Sample"] = w_samples["Sample"].apply(np.ceil)
     
-    potential = w_samples[(w_samples["Women"] <= 65) & (w_samples["Women"] >= 45) & (w_samples["Sample"] <= 206)].sort_values(by="Sample",ascending=False)
+    potential = w_samples[(w_samples["Women"] <= 75) & (w_samples["Women"] >= 35) & (w_samples["Sample"] <= 206)].sort_values(by="Sample",ascending=False)
 
-    return w_samples
+    return potential
 
 def power_analysis(inpath, outpath):
     bls = pd.read_csv(inpath+'blsdata.csv')
