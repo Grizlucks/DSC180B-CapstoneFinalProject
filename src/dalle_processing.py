@@ -28,5 +28,6 @@ def create_images(outpath,occupations,num_occupations):
                 image_url = url["url"]
                 urllib.request.urlretrieve(image_url, f"{outpath}image_data/{occupation_file_name}_{i}_{j}.png")
 
+# IMAGES GENERATED HERE NEEDS TO BE ANNOTATED PRIOR TO CONTINUING PROCESSING
 def dalle_processing(inpath, outpath, occupations, num_occupations):
     create_images(outpath,occupations,num_occupations)
