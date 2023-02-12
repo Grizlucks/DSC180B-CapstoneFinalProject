@@ -7,17 +7,18 @@ Requirements:
 This project makes use of OPENAI and requires a 'config.py' file
 with the below line. 
 
-- OPENAI_API_KEY = "YOUR_API_KEY_HERE"
+OPENAI_API_KEY = "YOUR_API_KEY_HERE"
 
-If running the test target with an OpenAI key, it will generate ten images
+If running the test target with a valid OpenAI key, it will generate ten images
 (256x256) on that account to be charged (or with the user's remaining free
-credits if any.)
+credits if any).
 
 ## Instructions and Project Guide
 
 ### run.py
 
-Call 'python run.py test' to run the project using test data. This requires
+Call 'python run.py test' to run the project using test data. The project
+is not currently set up to run anything **except** test data. This requires
 a valid OpenAI API Key. See the above section for more information. 
 
 ## notebooks/
