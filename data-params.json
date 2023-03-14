@@ -1,0 +1,8 @@
+{
+    "inpath": "data/raw/",
+    "outpath": "data/out/",
+    "occupations": ["Fitness Instructor","Lawyer","Bartender","Financial Analyst","Cook",
+        "Dentist","Biological Scientist","Secondary School Teacher",
+        "Pharmacist","Janitor"],
+    "num_occupations": 210
+}

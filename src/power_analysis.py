@@ -45,7 +45,7 @@ def analysis(bls):
 
     w_samples["Sample"] = w_samples["Sample"].apply(np.ceil)
     
-    potential = w_samples[(w_samples["Women"] <= 75) & (w_samples["Women"] >= 35) & (w_samples["Sample"] <= 206)].sort_values(by="Sample",ascending=False)
+    potential = w_samples[(w_samples["Women"] <= 75) & (w_samples["Women"] >= 35) & (w_samples["Sample"] <= 210)].sort_values(by="Sample",ascending=False)
 
     return potential
 

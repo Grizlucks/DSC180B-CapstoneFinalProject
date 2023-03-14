@@ -17,9 +17,15 @@ credits if any).
 
 ### run.py
 
-Call 'python run.py test' to run the project using test data. The project
-is not currently set up to run anything **except** test data. This requires
-a valid OpenAI API Key. See the above section for more information. 
+Call `python run.py test` to run the project using test data. 
+
+To run the project on the data used for the actual report, call `python run.py` however this will take a bit of time.
+
+The run.py is setup to work with seperated targets that can be called by using the format `python run.py target1 target2 ...`:
+
+- `power` Performs analysis on BLS like data to give information on the sample size necessary at 1% statistical power for our statistical testing.
+- `images` Generates images based on the occupations specified in the main or test `params.json` files. Requires a `config.py` file to be setup as specified.
+- `analysis` Performs the statstical tests for the report while generating informative visualizations. Requires labeled image data in the format found under `test/raw/labeled_results.csv`. 
 
 ## notebooks/
 
